@@ -1,0 +1,26 @@
+<!--templates/blog/blog_list.html-->
+
+{% extends 'base.html' %}
+
+{% block container %}
+
+<div class="row">
+    {% for post in posts %}
+    <div class="col-sm-6 mt-4">
+        <div class="card">
+            <div class="card-body">
+
+              <img height="" width=''src="{{ post.image }}" class="img-fluid img-thumbnail mb-2">
+
+
+                <h2 style="font-size:26px; font-weight:bold;" class="card-title">{{ post.title }}</h2>
+                <p class="card-text mb-2">{{ post.body | truncatechars:250|safe }}</p>
+                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read more</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

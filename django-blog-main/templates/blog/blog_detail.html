@@ -1,0 +1,19 @@
+<!--templates/blog/blog_detail.html-->
+
+{% extends 'base.html' %}
+{% load static %}
+{% block container %}
+
+<div class="row">
+    <div class="card">
+      <img height="" width=''src="{{ post.image.url }}" class="img-fluid  mb-2">
+        <h1 style="font-size:40px;" class="card-header">{{ post.title }} by 	&nbsp; <span  class="text-primary">{{ post.author }}</span></h1>
+        <div class="card-body">
+            <h5 class="card-title">Published: {{ post.publish }}</h5>
+            <p class="card-text">{{ post.body|safe }}</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

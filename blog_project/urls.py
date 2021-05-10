@@ -23,4 +23,4 @@ urlpatterns = [
     # add this line
     path('', include('blog.urls', namespace='blog')),
     path('ckeditor/', include('ckeditor_uploader.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] 

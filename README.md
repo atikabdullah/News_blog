@@ -3,7 +3,7 @@
 
 ## To run this project follow these steps:
 ```javascript
-git clone https://github.com/thecodefires/django-blog.git
+git clone 
 ```
 ```python
 pip install -r requirements.txt
